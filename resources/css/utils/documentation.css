@@ -83,7 +83,7 @@
 }
 
 .prose a {
-  @apply text-primary underline underline-offset-4 hover:text-primary/80 transition-colors;
+  @apply text-link underline underline-offset-4 transition-colors hover:opacity-80;
 }
 
 .prose strong {
@@ -120,11 +120,11 @@
 }
 
 .prose li::marker {
-  @apply text-primary;
+  @apply text-muted-foreground;
 }
 
 .prose blockquote {
-  @apply border-l-4 border-primary/30 pl-4 my-6 italic text-muted-foreground;
+  @apply border-l-2 border-border pl-4 my-6 text-muted-foreground;
 }
 
 .prose hr {
@@ -213,9 +213,10 @@ pre[class*="language-"] {
   }
 }
 
-/* Smooth scroll behavior */
-html {
-  @apply scroll-smooth;
+/* Headings clear the sticky header when linked to */
+.documentation-main h2,
+.documentation-main h3 {
+  scroll-margin-top: 5rem;
 }
 
 /* Focus visible styles */
@@ -225,5 +226,5 @@ html {
 
 /* Selection styles */
 ::selection {
-  @apply bg-primary/20 text-foreground;
+  @apply bg-foreground/10 text-foreground;
 }

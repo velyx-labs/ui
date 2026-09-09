@@ -25,6 +25,17 @@ it('renders documentation pages through the shared layout', function () {
     $this->get(route('docs.index'))->assertOk();
 });
 
+it('renders the component page with metadata sections and the on-this-page nav', function () {
+    $html = $this->get(route('docs.components.show', 'button'))->assertOk()->getContent();
+
+    expect($html)
+        ->toContain('id="installation"')
+        ->toContain('id="preview"')
+        ->toContain('id="requirements"')
+        ->toContain('On this page')
+        ->toContain('docsToc');
+});
+
 it('serves llms.txt as plain text', function () {
     $this->get(route('llms.txt'))
         ->assertOk()

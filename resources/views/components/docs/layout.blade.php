@@ -72,5 +72,10 @@
             {{ $slot }}
         </main>
 
+        {{-- On this page --}}
+        <aside class="documentation-toc">
+            <x-docs.toc />
+        </aside>
+
     </div>
 </x-docs.base-layout>
