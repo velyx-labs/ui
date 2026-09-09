@@ -79,31 +79,16 @@
     @stack('previewScripts')
     @livewireScriptConfig
     
-    <!-- Initialize theme -->
+    <!-- Initialize theme: stored preference, else system -->
     <script>
-        // Theme initialization - default to dark
-        if (localStorage.getItem('theme') !== 'light') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    
-        // Smooth scrolling for anchor links
-        document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
+        (function () {
+            const stored = localStorage.getItem('theme');
+            const theme = stored === 'dark' || stored === 'light'
+                ? stored
+                : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            document.documentElement.dataset.theme = theme;
+        })();
     </script>
 </body>
 </html>
