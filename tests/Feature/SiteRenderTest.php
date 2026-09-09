@@ -6,8 +6,8 @@ it('renders the landing page through the shared layout', function () {
     $response->assertOk()
         ->assertSee('Velyx', false)
         ->assertSee('livewire', false)
-        ->assertSee('Copiez le composant.', false)
-        ->assertSee('Ce qui est livré.', false);
+        ->assertSee('Copy the component.', false)
+        ->assertSee('What ships.', false);
 });
 
 it('drops the inline style blocks and the stale repo slug from the landing', function () {

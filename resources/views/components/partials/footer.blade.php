@@ -19,7 +19,7 @@ new class extends Component {};
                     </a>
 
                     <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">
-                        Copiez le composant, adaptez le balisage, livrez des interfaces qui restent votre produit — pas un paquet.
+                        Copy the component, adapt the markup, ship interfaces that still feel like your product — not a package.
                     </p>
 
                     <div class="inline-flex w-fit items-center gap-2 rounded-lg border border-border bg-muted px-3 py-2 font-mono text-xs text-muted-foreground">
@@ -29,7 +29,7 @@ new class extends Component {};
 
                     <div class="flex flex-wrap gap-2">
                         <x-ui.button href="{{ route('docs.page', 'installation') }}" wire:navigate size="sm" iconRight="arrow-right">
-                            Commencer
+                            Get started
                         </x-ui.button>
                         <x-ui.button href="{{ config('velyx-docs.links.github') }}" target="_blank" rel="noopener noreferrer" variant="outline" size="sm">
                             GitHub
@@ -37,15 +37,15 @@ new class extends Component {};
                     </div>
                 </div>
 
-                {{-- Explorer --}}
+                {{-- Explore --}}
                 <div class="flex flex-col gap-4">
-                    <p class="font-mono text-xs uppercase tracking-wider text-muted-foreground/60">Explorer</p>
+                    <p class="font-mono text-xs uppercase tracking-wider text-muted-foreground/60">Explore</p>
                     <div class="-ml-3 flex flex-col items-start">
                         <x-ui.button href="{{ route('docs.page', 'installation') }}" wire:navigate variant="link" size="sm" class="text-muted-foreground hover:text-foreground">
-                            Commencer
+                            Get started
                         </x-ui.button>
                         <x-ui.button href="{{ route('docs.page', 'components') }}" wire:navigate variant="link" size="sm" class="text-muted-foreground hover:text-foreground">
-                            Composants
+                            Components
                         </x-ui.button>
                         <x-ui.button href="{{ route('docs.index') }}" wire:navigate variant="link" size="sm" class="text-muted-foreground hover:text-foreground">
                             Documentation
@@ -53,9 +53,9 @@ new class extends Component {};
                     </div>
                 </div>
 
-                {{-- Communauté --}}
+                {{-- Community --}}
                 <div class="flex flex-col gap-4">
-                    <p class="font-mono text-xs uppercase tracking-wider text-muted-foreground/60">Communauté</p>
+                    <p class="font-mono text-xs uppercase tracking-wider text-muted-foreground/60">Community</p>
                     <div class="-ml-3 flex flex-col items-start">
                         <x-ui.button href="{{ config('velyx-docs.links.github') }}" target="_blank" rel="noopener noreferrer" variant="link" size="sm" class="text-muted-foreground hover:text-foreground">
                             GitHub
@@ -64,7 +64,7 @@ new class extends Component {};
                             X (Twitter)
                         </x-ui.button>
                         <x-ui.button href="{{ config('velyx-docs.links.support') }}" target="_blank" rel="noopener noreferrer" variant="link" size="sm" iconLeft="heart" class="text-muted-foreground hover:text-foreground">
-                            Soutenir
+                            Support
                         </x-ui.button>
                     </div>
                 </div>
@@ -74,12 +74,12 @@ new class extends Component {};
             <x-ui.separator class="my-8" />
 
             <div class="flex flex-col gap-3 text-xs text-muted-foreground/70 sm:flex-row sm:items-center sm:justify-between">
-                <p>&copy; {{ date('Y') }} Velyx. Des composants Laravel pour les équipes qui tiennent à leur code.</p>
+                <p>&copy; {{ date('Y') }} Velyx. UI components for Laravel teams that value ownership.</p>
                 <div class="flex items-center gap-5">
                     <button
                         type="button"
                         class="dark-mode-toggle group inline-flex items-center gap-2 rounded text-xs text-muted-foreground/70 transition-colors hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                        aria-label="Basculer le thème sombre"
+                        aria-label="Toggle dark mode"
                     >
                         <x-lucide-sun class="h-3.5 w-3.5 shrink-0 dark:hidden" />
                         <x-lucide-moon class="hidden h-3.5 w-3.5 shrink-0 dark:block" />
@@ -87,13 +87,13 @@ new class extends Component {};
                             <span class="absolute size-4 translate-x-0.5 rounded-full bg-foreground/70 shadow-sm transition-transform duration-200 ease-out dark:translate-x-[1.125rem]"></span>
                         </span>
                         <span class="select-none">
-                            <span class="dark:hidden">Clair</span>
-                            <span class="hidden dark:inline">Sombre</span>
+                            <span class="dark:hidden">Light</span>
+                            <span class="hidden dark:inline">Dark</span>
                         </span>
                     </button>
 
                     <p class="flex items-center gap-1">
-                        Inspiré par
+                        Inspired by
                         <x-ui.button href="https://ui.shadcn.com?utm_source={{ url()->current() }}" target="_blank" rel="noopener noreferrer" variant="link" class="h-auto p-0 text-xs text-muted-foreground/70 hover:text-muted-foreground">
                             shadcn/ui
                         </x-ui.button>

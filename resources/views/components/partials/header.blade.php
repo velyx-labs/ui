@@ -16,12 +16,12 @@ new class extends Component {};
             </a>
 
             {{-- Nav --}}
-            <nav class="hidden flex-1 items-center gap-1 sm:flex" aria-label="Navigation principale">
+            <nav class="hidden flex-1 items-center gap-1 sm:flex" aria-label="Main navigation">
                 <x-ui.button href="{{ route('docs.page', 'installation') }}" wire:navigate variant="ghost" size="sm" class="text-muted-foreground hover:text-foreground">
                     Docs
                 </x-ui.button>
                 <x-ui.button href="{{ route('docs.page', 'components') }}" wire:navigate variant="ghost" size="sm" class="text-muted-foreground hover:text-foreground">
-                    Composants
+                    Components
                 </x-ui.button>
             </nav>
 
@@ -34,7 +34,7 @@ new class extends Component {};
                     class="inline-flex h-8 items-center gap-1.5 rounded-md px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                     <x-lucide-heart class="h-3.5 w-3.5" />
-                    <span class="hidden sm:inline">Soutenir</span>
+                    <span class="hidden sm:inline">Support</span>
                 </a>
 
                 <a
@@ -42,7 +42,7 @@ new class extends Component {};
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    aria-label="Velyx sur GitHub"
+                    aria-label="Velyx on GitHub"
                 >
                     <x-icons.github class="h-4 w-4" />
                 </a>
