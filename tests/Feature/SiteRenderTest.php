@@ -5,7 +5,18 @@ it('renders the landing page through the shared layout', function () {
 
     $response->assertOk()
         ->assertSee('Velyx', false)
-        ->assertSee('livewire', false);
+        ->assertSee('livewire', false)
+        ->assertSee('Copiez le composant.', false)
+        ->assertSee('Ce qui est livré.', false);
+});
+
+it('drops the inline style blocks and the stale repo slug from the landing', function () {
+    $html = $this->get(route('home'))->assertOk()->getContent();
+
+    expect($html)
+        ->not->toContain('velyx-hero')
+        ->not->toContain('velyx-showcase')
+        ->not->toContain('velyx-labs/registry');
 });
 
 it('renders documentation pages through the shared layout', function () {
