@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+<title>Velyx — UI components for your Laravel codebase</title>
+<rect width="1200" height="630" fill="#fff"/>
+<g transform="translate(56 46) scale(.84)"><g color="#000">
+  <g transform="translate(0 10) scale(4.5)"><path d="M6 3H10M3 7L8 13L13 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g fill="currentColor" transform="translate(91 68) scale(.08 -.08)">
+    <path transform="translate(0 0)" d="M276.4 0 19.6 710H134.8L344.4 119.6L553.2 710H668.4L411.2 0Z"/>
+    <path transform="translate(663 0)" d="M293.8 -12Q216.4 -12 159.8 22.2Q103.2 56.4 72.4 119.10000000000001Q41.6 181.8 41.6 266Q41.6 350.2 72.4 412.4Q103.2 474.6 159.0 509.3Q214.8 544 290.6 544Q363.2 544 418.29999999999995 510.7Q473.4 477.4 503.8 414.4Q534.2 351.4 534.2 262V235.2H152Q156.4 157.4 193.9 118.30000000000001Q231.4 79.2 294.6 79.2Q342 79.2 372.9 101.0Q403.8 122.8 416 160.4L526.4 152.8Q505.2 78.6 443.6 33.3Q382 -12 293.8 -12ZM152 315.2H421.8Q416.8 386.2 381.20000000000005 419.9Q345.6 453.6 290.6 453.6Q234.4 453.6 197.9 418.4Q161.4 383.2 152 315.2Z"/>
+    <path transform="translate(1213.8 0)" d="M191.2 0Q138.8 0 107.0 27.0Q75.2 54 75.2 113.2V710H181.2V123.2Q181.2 104.8 190.6 95.69999999999999Q200 86.6 217.6 86.6H260.2V0Z"/>
+    <path transform="translate(1471 0)" d="M105.4 -150V-63.4H169.8Q197 -63.4 210.1 -55.2Q223.2 -47 230.2 -28L246.8 15.600000000000001H213.8L21.6 532H134L280.2 114.4L419.4 532H531.8L319.8 -61.6Q303.6 -108 272.3 -129.0Q241 -150 185.4 -150Z"/>
+    <path transform="translate(1999.4 0)" d="M46.6 0 240.2 272 55 532H173.4L304.2 341.2L431.4 532H552.2L368.6 270.4L560 0H441.6L305 203.2L167.4 0Z"/>
+  </g>
+</g>
+</g>
+<g fill="#000" font-family="Arial, Helvetica, sans-serif">
+<text x="62" y="250" font-size="47" font-weight="700" letter-spacing="-1.8">UI components.</text>
+<text x="62" y="309" font-size="47" font-weight="700" letter-spacing="-1.8">Your Laravel code.</text>
+<text x="64" y="365" font-size="21">Copy components into your codebase.</text>
+<text x="64" y="397" font-size="21">Customize every detail.</text>
+</g>
+<image x="567" y="134" width="587" height="391.333" xlink:href="og-illustration.png" preserveAspectRatio="xMidYMid meet"/>
+<path d="M64 538H1136" stroke="#000" stroke-width="1"/>
+<g fill="#000" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1.5">
+<text x="64" y="578">BUILT FOR LARAVEL</text>
+<text x="1136" y="578" text-anchor="end">COPY. CUSTOMIZE. SHIP.</text>
+</g>
+</svg>
