@@ -12,20 +12,20 @@
         <section>
             <a
                 href="{{ docs_url($item['url']) }}"
-                class="mb-2 flex items-center justify-between rounded-md px-2 py-1.5 font-semibold text-foreground hover:bg-accent"
+                class="mb-2 block px-2 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/60 transition-colors hover:text-foreground"
             >
-                <span>{{ $section }}</span>
+                {{ $section }}
             </a>
 
-            <div class="space-y-0.5 border-l border-border pl-2">
+            <div class="space-y-px border-l border-border">
                 @foreach(($item['children'] ?? []) as $label => $url)
                     @php $active = $currentPath === trim($url, '/'); @endphp
                     <a
                         href="{{ docs_url($url) }}"
                         @class([
-                            'block rounded-md px-2 py-1.5 transition-colors',
-                            'bg-accent font-medium text-accent-foreground' => $active,
-                            'text-muted-foreground hover:bg-accent/70 hover:text-foreground' => ! $active,
+                            '-ml-px block border-l py-1.5 pl-3 transition-colors',
+                            'border-foreground font-medium text-foreground' => $active,
+                            'border-transparent text-muted-foreground hover:border-border hover:text-foreground' => ! $active,
                         ])
                     >
                         {{ $label }}

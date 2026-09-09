@@ -73,7 +73,13 @@ function preferredTheme() {
         return savedTheme;
     }
 
-    return "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function hasExplicitTheme() {
+    const saved = localStorage.getItem("theme");
+
+    return saved === "dark" || saved === "light";
 }
 
 function applyTheme(theme = preferredTheme()) {
@@ -220,6 +226,12 @@ function bootVelyx() {
 }
 
 applyTheme();
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if (!hasExplicitTheme()) {
+        applyTheme();
+    }
+});
 
 document.addEventListener("DOMContentLoaded", bootVelyx);
 document.addEventListener("livewire:navigated", bootVelyx);

@@ -2,23 +2,21 @@
 
 use Livewire\Component;
 
-new class extends Component {
-};
+new class extends Component {};
 ?>
 
-<header class="sticky top-0 z-50 w-full border-b border-border/50 bg-background/90 backdrop-blur supports-backdrop-filter:bg-background/75">
+<header class="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur supports-backdrop-filter:bg-background/70">
     <div class="px-6 lg:px-12 xl:px-24">
-        <div class="flex h-14 items-center justify-between gap-6 max-w-7xl mx-auto">
+        <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-6">
 
             {{-- Logo --}}
-            <x-ui.button href="{{ route('home') }}" wire:navigate variant="ghost" class="gap-2 px-0 hover:bg-transparent">
-                <img class="h-6 w-6 dark:hidden" src="{{ asset('assets/img/logo.svg') }}" alt="Velyx" width="24" height="24">
-                <img class="hidden h-6 w-6 dark:block" src="{{ asset('assets/img/logo-dark.svg') }}" alt="Velyx" width="24" height="24">
-                <span class="text-[15px] font-semibold tracking-tight text-foreground">Velyx</span>
-            </x-ui.button>
+            <a href="{{ route('home') }}" wire:navigate class="flex items-center gap-2 text-foreground">
+                <x-icons.velyx class="h-5 w-5" />
+                <span class="text-[15px] font-semibold tracking-tight">Velyx</span>
+            </a>
 
-            {{-- Nav — hidden on mobile --}}
-            <nav class="hidden sm:flex flex-1 items-center gap-0.5" aria-label="Main navigation">
+            {{-- Nav --}}
+            <nav class="hidden flex-1 items-center gap-1 sm:flex" aria-label="Main navigation">
                 <x-ui.button href="{{ route('docs.page', 'installation') }}" wire:navigate variant="ghost" size="sm" class="text-muted-foreground hover:text-foreground">
                     Docs
                 </x-ui.button>
@@ -28,35 +26,26 @@ new class extends Component {
             </nav>
 
             {{-- Right actions --}}
-            <div class="flex items-center gap-1.5">
-
-                {{-- Buy Me a Coffee --}}
+            <div class="flex items-center gap-1">
                 <a
-                    href="https://gvcjmaad.mychariow.shop/velyx-dev"
+                    href="{{ config('velyx-docs.links.support') }}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex h-8 shrink-0 items-center justify-center gap-1.5 rounded-md px-2.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    style="background: rgba(245,78,0,0.08); color: #f54e00; border: 1px solid rgba(245,78,0,0.18);"
-                    onmouseover="this.style.background='rgba(245,78,0,0.14)'"
-                    onmouseout="this.style.background='rgba(245,78,0,0.08)'"
-                    aria-label="Support the project on Buy Me a Coffee"
+                    class="inline-flex h-8 items-center gap-1.5 rounded-md px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                    <x-lucide-coffee class="h-3.5 w-3.5 shrink-0" />
+                    <x-lucide-heart class="h-3.5 w-3.5" />
                     <span class="hidden sm:inline">Support</span>
                 </a>
 
-                {{-- GitHub --}}
                 <a
-                    href="https://github.com/velyx-labs/velyx"
+                    href="{{ config('velyx-docs.links.github') }}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex size-9 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                    aria-label="View on GitHub"
+                    class="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    aria-label="Velyx on GitHub"
                 >
                     <x-icons.github class="h-4 w-4" />
                 </a>
-
-
             </div>
         </div>
     </div>
