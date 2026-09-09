@@ -6,6 +6,14 @@ return [
     'site_name' => 'Velyx',
     'site_description' => 'Laravel-first UI components you can copy, adapt, and ship without losing control of your codebase.',
 
+    'github_repo' => 'velyx-labs/velyx',
+
+    'links' => [
+        'github' => 'https://github.com/velyx-labs/velyx',
+        'twitter' => 'https://x.com/velyxdev',
+        'support' => 'https://gvcjmaad.mychariow.shop/velyx-dev',
+    ],
+
     'navigation' => [
         'Getting Started' => [
             'url' => 'docs/installation',

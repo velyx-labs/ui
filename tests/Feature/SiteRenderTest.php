@@ -34,3 +34,13 @@ it('exposes the Open Graph image and web manifest in the head', function () {
         ->assertSee('brand/og-image.png', false)
         ->assertSee('site.webmanifest', false);
 });
+
+it('renders the header and footer with the inline mark and canonical repo link', function () {
+    $html = $this->get(route('home'))->assertOk()->getContent();
+
+    expect($html)
+        ->toContain('M6 3H10M3 7L8 13L13 7')
+        ->toContain('https://github.com/velyx-labs/velyx');
+
+    $this->get(route('home'))->assertDontSee('assets/img/logo', false);
+});
