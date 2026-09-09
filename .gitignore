@@ -27,3 +27,6 @@ yarn-error.log
 rr
 .rr.yaml
 coverage.xml/
+
+# Local design asset drop (extracted into public/brand in the brand PR)
+velyx-web-assets.zip
